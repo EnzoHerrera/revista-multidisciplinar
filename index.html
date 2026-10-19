@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revista Bets — O Preço da Ganância</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Imagem ainda não colocada? Mostra o padrão (imagens/placeholder.svg).
+   Para trocar: salve a foto em /imagens com o MESMO nome do src e pronto. */
+window.addEventListener('error', function (e) {
+  var t = e.target;
+  if (t && t.tagName === 'IMG' && !t.dataset.ph) {
+    t.dataset.ph = '1';
+    t.src = 'imagens/placeholder.svg';
+  }
+}, true);
+
+/* No celular o menu "Nesta edição" começa recolhido */
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.innerWidth < 900) document.getElementById('menu').classList.add('fechado');
+  document.querySelectorAll('#menu a').forEach(function (a) {
+    a.addEventListener('click', function () { if (window.innerWidth < 900) document.getElementById('menu').classList.add('fechado'); });
+  });
+});
+</script>
+</head>
+<body>
+<div class="pagina">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="topo">
+    <img class="hero__foto" src="imagens/hero-fundo.png" alt="">
+    <div class="hero__degrade"></div>
+    <div class="hero__diagonal"></div>
+    <div class="hero__barra hero__barra--1"></div>
+    <div class="hero__barra hero__barra--2"></div>
+
+    <nav class="menu-edicao" id="menu" aria-label="Nesta edição">
+      <div class="menu-edicao__topo">
+        <h2>Nesta edição</h2>
+        <button class="menu-edicao__x" type="button" aria-label="Abrir ou fechar menu" onclick="document.getElementById('menu').classList.toggle('fechado')"><i></i><i></i><i></i><span>×</span></button>
+      </div>
+      <ol>
+        <li><a href="#editorial"><b>01</b>Editorial</a></li>
+        <li><a href="#bet-raiz"><b>02</b>Bet, raiz do endividamento</a></li>
+        <li><a href="#colunistas"><b>03</b>Colunistas</a></li>
+        <li><a href="#suicidio"><b>04</b>Suicídio pelo vício</a></li>
+        <li><a href="#carater"><b>05</b>Caráter à custa dos outros</a></li>
+        <li><a href="#bolso"><b>06</b>Como isso afeta seu bolso?</a></li>
+        <li><a href="#conclusao"><b>07</b>Conclusão</a></li>
+      </ol>
+    </nav>
+
+    <div class="hero__texto">
+      <h1>O Preço da Ganância: A Epidemia de Dívidas que Sangra o Brasil</h1>
+      <p>O que acontece quando o lucro de uma empresa ou influenciador é posto acima da vida dos outros.</p>
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- ================= 01 EDITORIAL ================= -->
+    <section class="secao" id="editorial">
+      <div class="selo"><span>Editorial</span></div>
+      <h2 class="titulo">É preciso olhar para além do clique.</h2>
+
+      <div class="com-lateral">
+        <div class="texto">
+          <p class="capitular">Em março de 2024, a história do jovem Rafael Borges chocou o país e trouxe à tona a face mais dolorosa do avanço das apostas virtuais. O impacto do endividamento decorrente dos jogos online reflete uma crise sociocultural e econômica que atinge milhares de brasileiros. Esse cenário nocivo se perpetua no país impulsionado por dois pilares interdependentes: o aprendizado social que estimula o vício e, como consequência direta, o endividamento financeiro que destrói famílias. Desse modo, torna-se imperioso analisar essas vertentes para combater essa epidemia silenciosa e garantir a dignidade humana.</p>
+          <p>Em primeira análise, o estímulo ao jogo promovido pela mídia e pelas redes sociais funciona como a raiz ideológica do problema. De acordo com o psicólogo Albert Bandura (responsável por estruturar a teoria do aprendizado social), o comportamento é cultivado por meio de observações e reforços diários, como o convívio com familiares, a ostentação de influenciadores digitais e as ilusórias vitórias nas primeiras rodadas. No Brasil contemporâneo, o pensamento de Bandura se materializa na tendência coletiva de enxergar a aposta como uma atividade inofensiva e sob controle. Essa percepção equivocada mascara os sinais do vício e dificulta a busca por ajuda. Assim, a falta de conscientização unida ao bombardeio publicitário torna o ciclo dos jogos cada vez mais perigoso.</p>
+          <p>Ademais, esse reforço comportamental encontra seu desdobramento prático no severo endividamento pessoal e familiar. Relatórios do Banco Central do Brasil estimam que as apostas virtuais tenham retirado mais de R$ 100 bilhões da economia das famílias brasileiras. A dinâmica financeira evidencia impactos profundos no orçamento doméstico: muito além da perda financeira imediata, o acesso facilitado a jogos de azar alimenta um ciclo de desesperança e dependência. Seja nas apostas virtuais ou em modalidades tradicionais, como o jogo do bicho e loterias, a promessa do ganho rápido aprisiona parcelas vulneráveis da população em uma espiral de endividamento.</p>
+          <p>Falar sobre as apostas online é trazer um olhar aprofundado para todo o tipo de vício em aposta, ilegal ou não, vigente no sistema brasileiro. Para uma população rural ou com pouco acesso à internet é possível entrar no caminho do vício por meio do popular “jogo do bicho”, máquinas caça-níqueis ou mesmo apostas financiadas por governos como a Mega-Sena, cujos sorteios são televisionados nas maiores emissoras.</p>
+          <p>Portanto, embora existam marcos regulatórios e programas de renegociação de dívidas, faz-se urgente uma ação integrada que envolva a saúde pública e a educação preventiva. Para tanto, o Ministério da Saúde, em cooperação com as Redes de Atenção Psicossocial (RAPS) e o Ministério da Educação, deve instituir um Plano Nacional de Enfrentamento ao Vício em Apostas. Essa medida será operacionalizada por meio da ampliação do atendimento terapêutico na rede pública e da realização de palestras educativas em escolas e comunidades, com o detalhamento de orientações prestadas por psicólogos e especialistas sobre os riscos dos jogos. Essa estratégia terá como finalidade mitigar a influência social denunciada e acolher as vítimas do endividamento. Somente assim o Brasil garantirá a dignidade humana e protegerá seus cidadãos da armadilha das apostas.</p>
+        </div>
+        <aside class="lateral">
+          <img src="imagens/editorial-1.png" alt="" style="aspect-ratio:320/250">
+          <img src="imagens/editorial-2.png" alt="" style="aspect-ratio:320/310">
+          <img src="imagens/editorial-3.png" alt="" style="aspect-ratio:320/255">
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 02 BET, RAIZ DO ENDIVIDAMENTO ================= -->
+    <section class="secao" id="bet-raiz">
+      <div class="selo"><span>Bet, raiz do endividamento</span></div>
+      <h2 class="titulo">O preço da sorte: quando apostar custa mais do que dinheiro</h2>
+
+      <div class="duas-colunas">
+        <div class="col texto">
+          <p class="capitular">Basta um clique, alguns reais e a esperança de mudar de vida. Para Émile Durkheim, períodos de transformação e instabilidade podem provocar anomia, situação em que normas e referências sociais perdem parte de sua força reguladora. Em um país marcado pela desigualdade, pelo endividamento e pelas dificuldades financeiras, essa fragilidade pode contribuir para que promessas de enriquecimento rápido, como as oferecidas pelas bets, se tornem mais atraentes para parte da população.</p>
+          <p>Somente em 2025, mais de 25 milhões de brasileiros realizaram apostas no mercado regulamentado, segundo dados da Secretaria de Prêmios e Apostas do Ministério da Fazenda. No mesmo ano, estima-se que as famílias brasileiras tenham perdido aproximadamente R$ 62,5 bilhões líquidos para as plataformas, enquanto a receita bruta das operadoras regulamentadas alcançou cerca de R$ 37 bilhões. Os números revelam a dimensão de um mercado que cresce enquanto parte da população enfrenta dificuldades para equilibrar o próprio orçamento.</p>
+          <p>Entretanto, por trás das telas coloridas, dos anúncios de influenciadores e das histórias de supostos vencedores, existe uma realidade muito diferente. Uma pesquisa do Procon-SP, realizada entre 2025 e 2026, revelou que 68,73% dos apostadores entrevistados perderam mais dinheiro do que ganharam, enquanto 39,72% declararam possuir dívidas diretamente relacionadas aos jogos. Embora esses resultados não representem toda a população brasileira, eles evidenciam os riscos de uma atividade frequentemente apresentada como uma oportunidade financeira.</p>
+          <figure class="fig" style="margin-top:34px">
+            <img src="imagens/dados-cadastrais.png" alt="Dados cadastrais: total de CPFs únicos que apostaram, contas ativas em operadores e contas ativas nas marcas/bets" style="aspect-ratio:350/150">
+          </figure>
+        </div>
+        <div class="col texto">
+          <figure class="fig">
+            <img src="imagens/grafico-endividamento.png" alt="Gráfico: Brasil bate recorde de endividamento" style="aspect-ratio:240/190">
+          </figure>
+          <p>Histórias como as de Nicolas, uma jovem que viu seu casamento e sua estabilidade financeira serem comprometidos pelo vício, e de Rafael Borges Amaral, cuja trajetória foi marcada por perdas, isolamento e um desfecho trágico, mostram que as consequências das apostas ultrapassam o dinheiro. São vidas reais afetadas por um problema que envolve não apenas escolhas individuais, mas também vulnerabilidade econômica, mecanismos psicológicos e a influência de uma publicidade cada vez mais presente.</p>
+          <p>Os impactos também alcançam a economia brasileira. Estimativas do Made/FEA-USP apontam que as bets podem ter reduzido a atividade econômica do país em até R$ 141 bilhões em 2025, considerando os efeitos sobre o consumo e outros setores produtivos. Ao mesmo tempo, o crescimento desse mercado levanta questionamentos sobre a concentração de renda, os limites da regulamentação e a responsabilidade das empresas e do poder público.</p>
+          <p>Mas como uma atividade apresentada como entretenimento pode se transformar em um ciclo de dependência e endividamento? Por que a promessa de dinheiro fácil se torna tão atraente em momentos de dificuldade econômica? Quem realmente lucra com esse mercado? E até que ponto a sociedade está preparada para enfrentar suas consequências?</p>
+          <p>Afinal, quando milhões apostam na esperança de mudar de vida, é preciso questionar quem realmente está ganhando e qual é o preço pago por aqueles que perdem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 COLUNISTAS ================= -->
+    <section class="secao" id="colunistas">
+      <div class="selo"><span>Colunistas</span></div>
+      <h2 class="titulo titulo--sem-fio">Quem somos?</h2>
+    </section>
+  </main>
+
+  <div class="equipe">
+    <div class="conteudo equipe__trilho">
+      <button class="equipe__seta" type="button" aria-label="Anterior" onclick="document.getElementById('equipe').scrollBy({left:-258,behavior:'smooth'})">‹</button>
+      <div class="equipe__lista" id="equipe">
+        <div class="integrante"><img src="imagens/leticia.png" alt="Letícia Favoretto"><strong>Letícia Favoretto</strong><span>Editorial</span></div>
+        <div class="integrante"><img src="imagens/equipe-vinicius.png" alt="Vinicius de Oliveira"><strong>Vinicius de Oliveira</strong><span>Suicídio pelo Vício</span></div>
+        <div class="integrante"><img src="imagens/equipe-amanda.png" alt="Amanda Andrade"><strong>Amanda Andrade</strong><span>Caráter à custa dos outros</span></div>
+        <div class="integrante"><img src="imagens/equipe-enzo.png" alt="Enzo Herrera"><strong>Enzo Herrera</strong><span>Caráter à custa dos outros</span></div>
+        <div class="integrante"><img src="imagens/equipe-luis.png" alt="Luis H."><strong>Luis H.</strong><span>Como isso afeta seu bolso?</span></div>
+        <div class="integrante"><img src="imagens/equipe-matheus.png" alt="Matheus Fazan" style="object-position:50% 40%"><strong>Matheus Fazan</strong><span>Colunista</span></div>
+      </div>
+      <button class="equipe__seta" type="button" aria-label="Próximo" onclick="document.getElementById('equipe').scrollBy({left:258,behavior:'smooth'})">›</button>
+    </div>
+  </div>
+
+  <main class="conteudo">
+
+    <!-- ================= 04 SUICÍDIO PELO VÍCIO ================= -->
+    <section class="secao" id="suicidio">
+      <div class="selo"><span>Suicídio pelo vício</span></div>
+      <h2 class="titulo">Rafael e Otacílio: vidas interrompidas pelas apostas</h2>
+
+      <div class="duas-colunas">
+        <div class="col texto">
+          <p class="capitular">Durante sua infância e adolescência, Rafael Borges Amaral foi um jovem dedicado à prática esportiva. Natural de Uberlândia, Minas Gerais, foi nadador federado do Praia Clube até os 15 anos e, segundo sua mãe, a professora Vânia de Souza Borges, era um menino brincalhão, que possuía sonhos e planos para o futuro.</p>
+          <p>Segundo Vânia, o filho era responsável com o dinheiro, economizando para realizar seus sonhos, entre eles a compra de uma motocicleta.</p>
+          <p>Entretanto, o jovem passou a se interessar pelas plataformas de apostas online, atraído por histórias de pessoas que supostamente haviam conseguido ganhar grandes quantias de dinheiro jogando. Inicialmente, o comportamento parecia apenas uma forma de entretenimento, mas, com o passar do tempo, Rafael começou a substituir suas noites de descanso por apostas.</p>
+          <p>Segundo Vânia, Rafael chegou a vender sua motocicleta, avaliada em aproximadamente R$ 8 mil, e passou a esconder a gravidade das perdas financeiras. A dependência também comprometeu suas relações familiares e, após sucessivos conflitos, o jovem decidiu deixar a casa dos pais para morar com a avó.</p>
+          <p>Na madrugada de 23 de março de 2024, Rafael realizou uma transferência de R$ 30 para uma empresa de pagamentos ligada ao setor de apostas online. A movimentação ocorreu à 1h48 e foi a última transação desse tipo identificada pela família. Naquele mesmo dia, Rafael morreu aos 26 anos. O boletim de ocorrência registrou sua morte como suicídio, e Vânia sustenta que a dependência em apostas teve papel determinante no desfecho.</p>
+          <p>Após a morte do filho, a professora passou a buscar responsabilização. Ao acessar suas contas digitais, encontrou diversas propagandas de plataformas de apostas associadas a influenciadores que apresentavam os jogos como oportunidades de enriquecimento.</p>
+          <figure class="fig" style="width:80%;margin:34px auto 0">
+            <img src="imagens/rafael-otacilio.png" alt="" style="aspect-ratio:228/245">
+          </figure>
+        </div>
+        <div class="col texto">
+          <figure class="fig">
+            <img src="imagens/luto-otacilio.png" alt="Luto" style="aspect-ratio:222/252">
+          </figure>
+          <p>“Só descobri que meu irmão estava viciado em apostas quando ele morreu”, lamentou a advogada e auditora do Tribunal de Contas do Estado da Bahia (TCE-BA), Juliana Prates. Ela perdeu o irmão, o também auditor fiscal do órgão, Otacílio Prates, em dezembro do ano passado, e desde então se dedicado ao ativismo contra as apostas online, conhecidas como “bets”.</p>
+          <p>Otacílio começou a apostar em 2023 e, ao longo de quase dois anos, adquiriu uma dívida de aproximadamente R$ 1,5 milhão.</p>
+          <p>“Saí do luto para a luta, não quero que ninguém passe por isso”, diz auditora que virou ativista após perder irmão para vício em bets.</p>
+          <p>O contexto de ludopatia só foi descoberto dias antes do Natal, quando Juliana encontrou uma carta deixada pelo irmão, na qual ele dizia que tiraria a própria vida. Otacílio tinha 46 anos e deixou a esposa e uma filha de seis anos.</p>
+          <p>Os familiares e amigos de Otacílio não sabiam que ele fazia parte dessa porcentagem. A irmã do auditor foi informada de que ele estava com problemas financeiros, que foram justificados como investimentos frustrados na bolsa de valores e em criptomoedas.</p>
+          <p>Segundo Juliana, o irmão chegou a ser internado por questões psicológicas após apresentar um surto, mas em nenhum momento contou sobre o vício em apostas online. Após a internação, ele tirou a própria vida.</p>
+          <p>“Na carta que deixou, ele dizia que havia perdido o sentido da vida, que havia perdido todo o dinheiro. Ele deixou todas as senhas e quando abri o celular, vi várias contas de bets abertas. Só naquele dia, ele tinha apostado R$ 109 mil”, contou.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SAIBA MAIS ================= -->
+  <section class="saiba" id="saiba-mais">
+    <div class="saiba__faixa"><span>Saiba Mais</span></div>
+    <div class="saiba__cartoes">
+      <a class="cartao" href="saiba-mais/saiba-mais-01.html">
+        <img src="imagens/saiba-1.png" alt="">
+        <div class="cartao__legenda">Teoria dos jogos, análise matemática sobre vício</div>
+      </a>
+      <a class="cartao" href="saiba-mais/saiba-mais-02.html">
+        <img src="imagens/saiba-2.png" alt="">
+        <div class="cartao__legenda">Aprendizagem social e behaviorismo, teoria sociológica</div>
+      </a>
+      <a class="cartao" href="saiba-mais/saiba-mais-03.html">
+        <img src="imagens/saiba-3.png" alt="">
+        <div class="cartao__legenda">Ludopatia como problema psiquiátrico</div>
+      </a>
+    </div>
+  </section>
+
+  <main class="conteudo">
+
+    <!-- ================= 05 CARÁTER À CUSTA DOS OUTROS ================= -->
+    <section class="secao" id="carater" style="padding-top:80px">
+      <div class="selo"><span>Caráter à custa dos outros</span></div>
+      <h2 class="titulo">Influenciadores ganhando à custa do endividamento de seus seguidores</h2>
+
+      <div class="galeria">
+        <img src="imagens/influenciadores-1.png" alt="">
+        <img src="imagens/influenciadores-2.png" alt="">
+      </div>
+
+      <div class="duas-colunas" style="margin-top:40px">
+        <div class="col texto">
+          <p>As ciências sociais, a psicologia econômica e a neurociência têm se debruçado sobre essa questão, para tentar explicar por que tanta gente se deixa envolver por essa armadilha mental. Mesmo com todas as estatísticas apontando que as chances de ganho são ínfimas, o que mais se verifica são os vieses comportamentais agindo em detrimento das avaliações racionais.</p>
+          <p>Muitas pessoas se permitem fantasiar, mesmo que por breves momentos, sobre como seria ganhar dinheiro de forma fácil, e a maioria das pessoas que fazem apostas online, no momento de desembolso do dinheiro no jogo, estão na verdade comprando uma pequena dose de esperança.</p>
+          <p>De nada adianta dizer a um apostador que as chances de ele ganhar são, por exemplo, de 1 em 175 milhões, porque a esmagadora maioria das pessoas não fará esse raciocínio, ou seja, o cérebro humano tem que processar muitas informações para conseguir trabalhar com um conceito probabilístico tão pequeno.</p>
+          <p>Sendo assim, o risco percebido em cada aposta tem pouco a ver com os resultados, e muito a ver com o quanto de medo ou esperança um apostador está sentindo no momento em que joga.</p>
+          <p>O psicólogo ganhador do Prêmio Nobel de Economia, Daniel Kahneman, afirmou há alguns anos em um artigo do The New York Times: “Para eventos emocionalmente significativos, o tamanho da probabilidade simplesmente não importa. O que importa é a possibilidade de ganhar. As pessoas ficam animadas com a imagem em suas mentes. A excitação cresce com o tamanho do prêmio, mas não diminui com o tamanho da probabilidade”.</p>
+          <figure class="fig" style="margin-top:34px">
+            <img src="imagens/kahneman.png" alt="Daniel Kahneman" style="aspect-ratio:260/180">
+          </figure>
+        </div>
+        <div class="col texto">
+          <p>A Teoria da Aprendizagem Social amplia a análise comportamental ao incorporar fatores cognitivos e sociais. Bandura argumentava que a aprendizagem não ocorre apenas por experiência direta, mas também pela observação de modelos, pelo reforço vicariante e pelas crenças de autoeficácia do indivíduo.</p>
+          <p>Modelagem: Indivíduos podem adquirir o comportamento de jogar ao observar modelos significativos como familiares, amigos, colegas ou figuras públicas engajados na atividade. A eficácia da modelagem é potencializada se o observador percebe o modelo como semelhante a si, atraente ou detentor de status. A observação de modelos que expressam prazer, excitação ou que obtêm ganhos financeiros através do jogo é particularmente influente.</p>
+          <figure class="fig">
+            <img src="imagens/bandura.png" alt="Albert Bandura" style="aspect-ratio:225/120">
+          </figure>
+          <p>A exposição midiática atua como uma poderosa fonte de modelagem. Filmes, programas de televisão, redes sociais e plataformas de streaming frequentemente retratam o jogo associado a estilos de vida luxuosos, risco emocionante e sucesso financeiro, normalizando o comportamento e diminuindo a percepção dos riscos associados. Estudos indicam que a exposição a promoções de jogos, especialmente através de plataformas digitais, está associada a uma maior intenção de jogar.</p>
+          <p>Reforço Vicariante: Ver um modelo ser recompensado por jogar, seja através de ganhos monetários, aprovação social ou demonstrações de alegria, aumenta a probabilidade de o observador imitar o comportamento. Por isso, o reforço e a divulgação dos jogos por influenciadores é tão prejudicial, pois são modelos a serem seguidos por quem os acompanha. Por fim, o pior é ver que o caráter e a empatia ao próximo são facilmente vendíveis pela quantidade certa de dinheiro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 COMO ISSO AFETA SEU BOLSO? ================= -->
+    <section class="secao" id="bolso">
+      <div class="selo"><span>Como isso afeta seu bolso?</span></div>
+      <h2 class="titulo">Análise dos impactos das bets na economia brasileira</h2>
+
+      <div class="duas-colunas">
+        <div class="col texto">
+          <p class="capitular">Para parte dos apostadores, o primeiro contato com as bets não ocorre apenas pela busca por entretenimento. Em momentos de dificuldade financeira, a possibilidade de transformar uma pequena quantia em um valor muito maior pode fazer com que a aposta seja percebida como uma alternativa para complementar a renda ou até solucionar dívidas.</p>
+          <div class="destaque">
+            <h3>ENTENDA: O que é a Selic?</h3>
+            <p>A Selic é a taxa básica de juros da economia brasileira. Ela influencia os juros cobrados em empréstimos, financiamentos e outras formas de crédito. Em geral, quando a Selic sobe, tomar dinheiro emprestado tende a ficar mais caro.</p>
+          </div>
+          <p>Esse cenário coincide com um período de crédito mais caro no Brasil. A taxa Selic, que estava em 10,5% ao ano em meados de 2024, chegou a 15% em 2025. Embora ela não corresponda diretamente à taxa paga pelos consumidores, influencia o custo dos empréstimos e de outras modalidades de crédito. Entre outubro de 2024 e janeiro de 2025, a taxa média do crédito livre para pessoas físicas também aumentou 1,5 ponto percentual.</p>
+          <figure class="fig" style="margin-top:34px">
+            <img src="imagens/grafico-selic.png" alt="Gráfico: Meta para a taxa Selic" style="aspect-ratio:290/200">
+          </figure>
+        </div>
+        <div class="col texto">
+          <figure class="fig">
+            <img src="imagens/grafico-rosca.png" alt="Gráfico: atualmente possui dívidas em razão dos jogos e/ou apostas?" style="aspect-ratio:210/130">
+          </figure>
+          <p>O problema se torna mais grave quando o dinheiro disponível termina, mas as apostas continuam. Segundo pesquisa do Procon-SP, 88,73% dos apostadores entrevistados afirmaram ter perdido mais dinheiro do que ganharam. Além disso, 52,39% já haviam comprometido parte significativa da renda, retirado recursos de investimentos ou recorrido a empréstimos para continuar apostando.</p>
+          <p>Nessas situações, o crédito pode prolongar um comportamento que os próprios recursos do apostador já não sustentariam. Uma perda financiada com dinheiro próprio termina quando aquele valor acaba; uma perda financiada por empréstimos deixa uma dívida para os meses seguintes. Com a incidência de juros, o valor a ser recuperado cresce, o que pode fortalecer a tentativa de realizar novas apostas para compensar os prejuízos anteriores.</p>
+          <p>Os dados mostram que esse processo já atinge uma parcela significativa dos apostadores pesquisados: 39,72% declararam possuir dívidas diretamente relacionadas aos jogos e apostas. Entre eles, 46,81% possuíam renda de até dois salários-mínimos e outros 30,50% recebiam entre dois e quatro salários-mínimos, indicando maior presença do problema justamente entre grupos com menor margem financeira para absorver perdas.</p>
+          <p>Forma-se, assim, um ciclo difícil de interromper. O jogador perde dinheiro e aposta novamente para tentar recuperá-lo; quando os próprios recursos acabam, pode recorrer ao crédito; com novas perdas e a incidência de juros, a dívida aumenta. A promessa inicial de superar uma dificuldade financeira passa, então, a contribuir para seu agravamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 CONCLUSÃO ================= -->
+    <section class="secao" id="conclusao">
+      <div class="selo"><span>Conclusão</span></div>
+      <h2 class="titulo">Sem Apoio Psicológico, a Conta das Bets Nunca Vai Fechar</h2>
+
+      <div class="duas-colunas">
+        <div class="col texto">
+          <figure class="fig">
+            <img src="imagens/cartazes.png" alt="Cartazes contra as bets" style="aspect-ratio:262/160">
+          </figure>
+          <p class="capitular">O atual governo editou na sexta-feira, 25 de setembro, uma Medida Provisória que acaba com a exploração, oferta, intermediação e publicidade de apostas de quota fixa no país, as chamadas bets.</p>
+          <p>A decisão alcança tanto as apostas esportivas quanto os jogos online, em ambientes físicos e virtuais, e se aplica também às concessões e autorizações estaduais e distritais. A proibição não abrange as demais modalidades lotéricas já autorizadas em lei.</p>
+          <p>Com a Medida Provisória, as bets até então autorizadas não poderão oferecer apostas nem fazer qualquer tipo de publicidade no país. As empresas tiveram até 5/10 para retirar material publicitário e de patrocínio veiculado em meios físicos e em peças de publicidade exterior.</p>
+          <p>O Ministério da Fazenda e o Ministério da Justiça atuarão para o bloqueio de sites ilegais. O Ministério da Fazenda conta com um laboratório virtual dedicado à identificação e ao bloqueio mais rápido de plataformas irregulares. Após a identificação dos sites, a SPA comunica a Anatel para bloqueio dos domínios, com medidas que incluem também a remoção de aplicativos e a restrição dos meios de pagamento utilizados por operadores ilegais.</p>
+          <p>Pessoas físicas com dívidas em atraso poderão renegociá-las por meio do Desenrola Brasil 3.0, criado por meio da Medida Provisória (MPV) <u>1.393/2026</u>. A nova modalidade do programa deverá funcionar até 30 de junho de 2028.</p>
+          <p>Pela regra geral, poderão entrar nas carteiras dívidas de pessoas físicas com valor original inferior a R$ 10 mil e que, em 25 de setembro de 2026, estavam em atraso havia mais de 720 dias e menos de 1.645 dias. Poderão ser incluídas tanto dívidas bancárias quanto débitos passivos de registro em cadastros de inadimplentes, como os relacionados a serviços públicos, comércio varejista e prestadores de serviços. A MP permite que o Ministério da Fazenda estabeleça critérios adicionais e, em determinadas condições, autorize a inclusão de dívidas com outros prazos e valores.<br>Fonte: Agência Senado</p>
+        </div>
+        <div class="col texto">
+          <h3 class="conclusao-titulo" style="text-align:right">Mas será que somente medidas financeiras realmente funcionam?</h3>
+          <figure class="fig">
+            <img src="imagens/medida-provisoria.png" alt="Brasil sem bets" style="aspect-ratio:224/150">
+          </figure>
+          <p>Por mais que o governo tenha realizado a Medida Provisória que é muito benéfica para a sociedade brasileira, não mitiga por inteiro o problema da ludopatia. Em quantos bairros, em portas semifechadas e de maneira escondida não existem jogos de caça-níquel? Em quantos bairros de portas muito bem abertas nas lotéricas não há pessoas apostando na Mega-Sena, Quina, entre outras apostas legalizadas pelo governo e que não estão inclusas na medida?</p>
+          <p>Entendemos que olhar financeiramente é importante e necessário no país, baseado na realidade macroeconômica. Porém, não está ocorrendo um olhar mais voltado ao cidadão, ao ser humano que muito além da perda financeira, desenvolve uma dependência e patologia ligada ao vício.</p>
+          <p>Enquanto não tiver atitudes voltadas a saúde mental, prevenção ao vício, palestras educativas para jovens que desde cedo aprenderão os malefícios das bets, muitas Nicoles, Rafaéis e Otacílios se perderam e terão finais trágicos.</p>
+          <p>Agradecemos a todos que acompanharam a revista e esperamos que a conscientização tenha surtido efeito.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Revista Bets</p>
+    <a href="#topo">Voltar ao topo ↑</a>
+  </footer>
+</div>
+</body>
+</html>
